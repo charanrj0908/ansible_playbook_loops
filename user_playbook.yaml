@@ -1,0 +1,9 @@
+-
+ hosts: nodes
+ tasks:
+   - name : creating users
+     user:
+       name: "{{ item }}"
+     with_items:
+       - rahul
+       - maggie

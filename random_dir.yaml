@@ -1,0 +1,11 @@
+-
+ hosts: nodes
+ tasks:
+   - name: create random directory
+     file:
+       dest: "/home/charan/{{ item }}"
+       state: directory
+     with_random_choice:
+       - "google"
+       - "apple"
+       - "facebook"
